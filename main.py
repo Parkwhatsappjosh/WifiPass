@@ -1,4 +1,5 @@
 import subprocess
+import algorithms
 #import admin
 
 subprocess.run('powershell -Command "Start-Process cmd -Verb RunAs"')
