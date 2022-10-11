@@ -26,3 +26,6 @@ subprocess.run('NETSH WLAN SET HOSTEDNETWORK MODE=ALLOW SSID=”JioFi3_187726" K
 process = subprocess.run("Netsh wlan connect ssid=JioFi3_187726 name=JioFi3_187726", shell=True, capture_output=True)
 print(process.stdout.decode())
 print(algorithms.passgen())
+
+print("New commit")
+
