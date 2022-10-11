@@ -5,6 +5,6 @@ list1= [1,2,3,4,5,6,7,8,9,0]
 passw = str()
 for i in range(8):
     n1= random.randint(0,9)
-    passw = passw+str(n1)
+    passw = passw+str(list1[n1])
     
 print(passw)
