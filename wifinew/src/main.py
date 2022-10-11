@@ -27,5 +27,5 @@ process = subprocess.run("Netsh wlan connect ssid=JioFi3_187726 name=JioFi3_1877
 print(process.stdout.decode())
 print(algorithms.passgen())
 
-print("New commit")
+print("New commit version 2")
 
