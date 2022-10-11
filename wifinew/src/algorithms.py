@@ -10,3 +10,4 @@ def passgen():
         passw = passw+str(list1[n1])
         
     return passw
+print(passw)
