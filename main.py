@@ -1,11 +1,9 @@
+
 import subprocess
 import algorithms
-#import admin
 
-subprocess.run('powershell -Command "Start-Process cmd -Verb RunAs"')
-#NETSH WLAN SET HOSTEDNETWORK MODE=ALLOW SSID=”YOUR WIFI CONNECTION NAME” KEY=”YOUR WIFI CONNECTION PASSWORD”
 A=subprocess.run("netsh wlan show profiles", shell=True, capture_output=True)
-#subprocess.run("NETSH WLAN SET HOSTEDNETWORK MODE=ALLOW SSID=”ssid name” KEY=”password", shell=True)
+
 result = A.stdout.decode()
 f = open("result.txt","w")
 f.write(result)
@@ -24,4 +22,7 @@ for i in wifiraw:
         
 print(wifi)
 
-subprocess.run("NETSH WLAN SET HOSTEDNETWORK MODE=ALLOW SSID=”ssid name” KEY=”password")
+subprocess.run('NETSH WLAN SET HOSTEDNETWORK MODE=ALLOW SSID=”JioFi3_187726" KEY=”br7xpjfbev"',shell=True)
+process = subprocess.run("Netsh wlan connect ssid=JioFi3_187726 name=JioFi3_187726", shell=True, capture_output=True)
+print(process.stdout.decode())
+print(algorithms.passgen())
